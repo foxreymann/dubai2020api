@@ -32,7 +32,7 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
   * **Code:** 200  
   * **Content:**  
 ```javascript
-angular.callbacks._0({
+callback({
   "firt-item-index": 0,
   "last-item-index": 19,
   "items": [
@@ -72,7 +72,7 @@ Returns json data of a single posts. Post id used has been retreived from Show S
   * **Code:** 200  
   * **Content:**  
 ```javascript
-angular.callbacks._1({
+callback({
   "id": 1234,
   ...
 })
