@@ -17,7 +17,7 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
  **Optional:**
 
     `hashtag=[string|false]` defaults to `false`  
-    - filter items by secondary hashtag (\#mobility, \#sustainability etc.)
+    - filter items by secondary hashtag (\#mobility, \#sustainability etc.)  
 
     `callback=[string]` defaults to `callback`  
     - JSONP callback function name
