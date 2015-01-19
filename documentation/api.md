@@ -81,6 +81,9 @@ Returns json data of a single posts. Post id used has been retreived from Show S
 ```javascript
 callback({
   "id": 1234,
-  ...
+  "social-network": "twitter",
+  "image": "http://www.example.com/dubai.jpg",
+  "text" : "Lorem ipsum",
+  "epoch": "1421586217"
 })
 ```
