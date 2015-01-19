@@ -87,3 +87,12 @@ callback({
   "epoch": "1421586217"
 })
 ```
+
+## Social Feed Item Entity
+**id** `integer` Our internal identification number.  
+**social-network** `string` Social network where the item originates from. Possible values are `twitter` and `instagram`.  
+**image** `string` URL of the image assigned to the item. Empty string if no image is available.  
+**text** `string` Text assigned to the item. Empty string if no text is available.  
+**epoch** `integer` [Unix time](http://en.wikipedia.org/wiki/Unix_time) of when the item was posted.
+
+
