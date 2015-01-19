@@ -24,7 +24,7 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 
 
 `first-item-index` defaults to `0`  
-`last-item-index` defaults to `19`
+`last-item-index` defaults to `19`  
 - used for pagination
 
 ### Sample Call:
@@ -40,7 +40,20 @@ callback({
   "firt-item-index": 0,
   "last-item-index": 19,
   "items": [
-    ...
+    {
+      "id": 1234,
+      "social-network": "twitter",
+      "image": "http://www.example.com/dubai.jpg",
+      "text" : "Lorem ipsum",
+      "epoch": "1421586217"
+    },
+    {
+      "id": 1235,
+      "social-network": "instagram",
+      "image": "http://www.example.com/dubai-photo.jpg",
+      "text" : "",
+      "epoch": "1421586218"
+    }
   ]
 })
 ```
