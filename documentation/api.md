@@ -12,12 +12,15 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 
 `GET`
 
-*  **URL Params**
+* **URL Params**
 
- **Optional:**  
- `hashtag=[string|false]` defaults to `false`  
-`callback=[string]` defaults to `callback`  
-  * values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
+ **Optional:**
+
+    `hashtag=[string|false]` defaults to `false`  
+      * filter items by secondary hashtag (\#mobility, \#sustainability etc.)
+
+    `callback=[string]` defaults to `callback`  
+      * values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
 
 * **Success Response:**
 
