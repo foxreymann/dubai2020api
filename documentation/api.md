@@ -27,6 +27,10 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 `last-item-index` defaults to `19`
 - used for pagination
 
+### Sample Call:
+
+`/social-feed?hashtag=opportunity&callback=angular.callbacks._0&first-item-index=20&last-item-index=39`
+
 ### Success Response:
 
 **Code:** 200  
@@ -65,6 +69,10 @@ Returns json data of a single posts. Post id used has been retreived from Show S
 `callback=[string]` defaults to `callback`  
 - JSONP callback function name
 - values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
+
+### Sample Call:
+
+`/social-feed/1234?callback=angular.callbacks._1`
 
 ### Success Response:
 
