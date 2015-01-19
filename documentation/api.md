@@ -1,36 +1,36 @@
 # *Join the conversation* API specification
 
-**Show Social Feed**
-----
+## Show Social Feed
 Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiExpo2020 topic.
 
-* **URL**
+### URL
 
-    /social-feed
+/social-feed
 
-* **Method:**
+### Method:
 
-    `GET`
+`GET`
 
-* **Query String Params**
+### Query String Params
 
- **Optional:**
+**Optional:**
 
-    `hashtag=[string|false]` defaults to `false`  
-    - filter items by secondary hashtag (\#mobility, \#sustainability etc.)  
+`hashtag=[string]` defaults to empty string  
+- filter items by secondary hashtag (\#mobility, \#sustainability etc.)  
 
-    `callback=[string]` defaults to `callback`  
-    - JSONP callback function name
-    - values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
+`callback=[string]` defaults to `callback`  
+- JSONP callback function name
+- values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
 
-    `first-item-index` defaults to `0`  
-    `last-item-index` defaults to `19`
-    - used for pagination
 
-* **Success Response:**
+`first-item-index` defaults to `0`  
+`last-item-index` defaults to `19`
+- used for pagination
 
-  * **Code:** 200  
-  * **Content:**  
+### Success Response:
+
+**Code:** 200  
+**Content:**  
 ```javascript
 callback({
   "firt-item-index": 0,
@@ -47,25 +47,25 @@ Returns json data of a single posts. Post id used has been retreived from Show S
 
 * **URL**
 
-    /social-feed/:id
+/social-feed/:id
 
 * **Method:**
 
-    `GET`
+`GET`
 
 * **URL Params**
 
- **Required:**
+**Required:**
 
-   `id=[integer]`
+`id=[integer]`
 
 * **Query String Params**
 
- **Optional:**
+**Optional:**
 
-    `callback=[string]` defaults to `callback`  
-    - JSONP callback function name
-    - values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
+`callback=[string]` defaults to `callback`  
+- JSONP callback function name
+- values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
 
 * **Success Response:**
 
