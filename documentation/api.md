@@ -33,8 +33,8 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
   * **Content:**  
 ```javascript
 angular.callbacks._0({
-  "page": 1,
-  "per-page": 20,
+  "firt-item-index": 0,
+  "last-item-index": 19,
   "items": [
     ...
   ]
