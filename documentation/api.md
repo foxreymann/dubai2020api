@@ -2,7 +2,7 @@
 
 **Show Social Feed**
 ----
-Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiExpo2020 topic
+Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiExpo2020 topic.
 
 * **URL**
 
@@ -12,20 +12,20 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 
     `GET`
 
-* **URL Params**
+* **Query String Params**
 
  **Optional:**
 
     `hashtag=[string|false]` defaults to `false`  
-      * filter items by secondary hashtag (\#mobility, \#sustainability etc.)
+    - filter items by secondary hashtag (\#mobility, \#sustainability etc.)
 
     `callback=[string]` defaults to `callback`  
-      * JSONP callback function name
-      * values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
+    - JSONP callback function name
+    - values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
 
-    `first-item-index` defaults to `0`
-
+    `first-item-index` defaults to `0`  
     `last-item-index` defaults to `19`
+    - used for pagination
 
 * **Success Response:**
 
@@ -38,5 +38,42 @@ angular.callbacks._0({
   "items": [
     ...
   ]
+})
+```
+
+**Show Social Feed Item**
+----
+Returns json data of a single posts. Post id used has been retreived from Show Social Feed API call.
+
+* **URL**
+
+    /social-feed/:id
+
+* **Method:**
+
+    `GET`
+
+* **URL Params**
+
+ **Required:**
+
+   `id=[integer]`
+
+* **Query String Params**
+
+ **Optional:**
+
+    `callback=[string]` defaults to `callback`  
+    - JSONP callback function name
+    - values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
+
+* **Success Response:**
+
+  * **Code:** 200  
+  * **Content:**  
+```javascript
+angular.callbacks._1({
+  "id": 1234,
+  ...
 })
 ```
