@@ -41,25 +41,24 @@ callback({
 })
 ```
 
-**Show Social Feed Item**
-----
+## Show Social Feed Item
 Returns json data of a single posts. Post id used has been retreived from Show Social Feed API call.
 
-* **URL**
+### URL
 
 /social-feed/:id
 
-* **Method:**
+### Method:
 
 `GET`
 
-* **URL Params**
+### URL Params
 
 **Required:**
 
 `id=[integer]`
 
-* **Query String Params**
+### Query String Params
 
 **Optional:**
 
@@ -67,10 +66,10 @@ Returns json data of a single posts. Post id used has been retreived from Show S
 - JSONP callback function name
 - values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
 
-* **Success Response:**
+### Success Response:
 
-  * **Code:** 200  
-  * **Content:**  
+**Code:** 200  
+**Content:**  
 ```javascript
 callback({
   "id": 1234,
