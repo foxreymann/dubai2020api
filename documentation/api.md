@@ -6,11 +6,11 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 
 * **URL**
 
-/social-feed
+    /social-feed
 
 * **Method:**
 
-`GET`
+    `GET`
 
 * **URL Params**
 
@@ -20,7 +20,12 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
       * filter items by secondary hashtag (\#mobility, \#sustainability etc.)
 
     `callback=[string]` defaults to `callback`  
+      * JSONP callback function name
       * values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
+
+    `first-item-index` defaults to `0`
+
+    `last-item-index` defaults to `19`
 
 * **Success Response:**
 
