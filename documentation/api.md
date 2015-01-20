@@ -1,5 +1,11 @@
 # *Join the conversation* API specification
 
+## Legend
+
+**main hashtag** - `#Expo2020` hashtag
+
+**secondary hashtag** - Subtopic hashtag like `#collaboration`, `#education` etc. When post is originally hashtagged with more than one subtopic only the first one should be returned by the API.
+
 ## Show Social Feed
 Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiExpo2020 topic.
 
@@ -43,6 +49,7 @@ callback({
     {
       "id": 1234,
       "social-network": "twitter",
+      "hashtag": "education",
       "image": "http://www.example.com/dubai.jpg",
       "text" : "Lorem ipsum",
       "epoch": "1421586217"
@@ -50,6 +57,7 @@ callback({
     {
       "id": 1235,
       "social-network": "instagram",
+      "hashtag": "collaboration",
       "image": "http://www.example.com/dubai-photo.jpg",
       "text" : "",
       "epoch": "1421586218"
@@ -95,6 +103,7 @@ Returns json data of a single posts. Post id used has been retreived from Show S
 callback({
   "id": 1234,
   "social-network": "twitter",
+  "hashtag": "collaboration",
   "image": "http://www.example.com/dubai.jpg",
   "text" : "Lorem ipsum",
   "epoch": "1421586217"
@@ -104,6 +113,7 @@ callback({
 ## Social Feed Item Entity
 **id** `integer` Our internal identification number.  
 **social-network** `string` Social network where the item originates from. Possible values are `twitter` and `instagram`.  
+**hashtag** `string` Secondary hashtag assigned to the post.  
 **image** `string` URL of the image assigned to the item. Empty string if no image is available.  
 **text** `string` Text assigned to the item. Empty string if no text is available.  
 **epoch** `integer` [Unix time](http://en.wikipedia.org/wiki/Unix_time) of when the item was posted.
