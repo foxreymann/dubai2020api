@@ -24,13 +24,16 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 `hashtag=[string]` defaults to empty string  
 - filter items by secondary hashtag (\#mobility, \#sustainability etc.)  
 
-`first-item-index` defaults to `0`  
-`last-item-index` defaults to `19`  
-- used for pagination
+`last_item_id=[integer]`
+- Id of last post received from the API on the previous page. Next post after that one should be first on current page.
+- By default so if parameter is not specified, the newest post available should be returned as first post on the page.
+
+`per_page=[integer]` defaults to `20`
+- Number of items to be returned on current page.
 
 ### Sample Call:
 
-`/social-feed?hashtag=opportunity&first-item-index=20&last-item-index=39`
+`/social-feed?hashtag=opportunity&last_item_id=1234&per_page=80`
 
 ### Success Response:
 
