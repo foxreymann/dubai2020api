@@ -24,25 +24,20 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 `hashtag=[string]` defaults to empty string  
 - filter items by secondary hashtag (\#mobility, \#sustainability etc.)  
 
-`callback=[string]` defaults to `callback`  
-- JSONP callback function name
-- values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
-
-
 `first-item-index` defaults to `0`  
 `last-item-index` defaults to `19`  
 - used for pagination
 
 ### Sample Call:
 
-`/social-feed?hashtag=opportunity&callback=angular.callbacks._0&first-item-index=20&last-item-index=39`
+`/social-feed?hashtag=opportunity&first-item-index=20&last-item-index=39`
 
 ### Success Response:
 
 **Code:** 200  
 **Content:**  
 ```javascript
-callback({
+{
   "firt-item-index": 0,
   "last-item-index": 19,
   "items": [
@@ -63,7 +58,7 @@ callback({
       "epoch": "1421586218"
     }
   ]
-})
+}
 ```
 
 ## Show Social Feed Item
@@ -83,31 +78,23 @@ Returns json data of a single posts. Post id used has been retreived from Show S
 
 `id=[integer]`
 
-### Query String Params
-
-**Optional:**
-
-`callback=[string]` defaults to `callback`  
-- JSONP callback function name
-- values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
-
 ### Sample Call:
 
-`/social-feed/1234?callback=angular.callbacks._1`
+`/social-feed/1234
 
 ### Success Response:
 
 **Code:** 200  
 **Content:**  
 ```javascript
-callback({
+{
   "id": 1234,
   "social-network": "twitter",
   "hashtag": "collaboration",
   "image": "http://www.example.com/dubai.jpg",
   "text" : "Lorem ipsum",
   "epoch": "1421586217"
-})
+}
 ```
 
 ## Social Feed Item Entity
