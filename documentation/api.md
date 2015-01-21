@@ -36,7 +36,7 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 
 ### Sample Call:
 
-`/social-feed?hashtag=opportunity&last_item_id=1234&per_page=80`
+`/social-feed?hashtag=opportunity&last_item_id=1234&items_to_return=80&lang=ar`
 
 ### Success Response:
 
@@ -44,12 +44,10 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 **Content:**  
 ```javascript
 {
-  "firt-item-index": 0,
-  "last-item-index": 19,
   "items": [
     {
       "id": 1234,
-      "social-network": "twitter",
+      "social_network": "twitter",
       "hashtag": "education",
       "image": "http://www.example.com/dubai.jpg",
       "text" : "Lorem ipsum",
@@ -57,7 +55,7 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
     },
     {
       "id": 1235,
-      "social-network": "instagram",
+      "social_network": "instagram",
       "hashtag": "collaboration",
       "image": "http://www.example.com/dubai-photo.jpg",
       "text" : "",
@@ -86,7 +84,7 @@ Returns json data of a single posts. Post id used has been retreived from Show S
 
 ### Sample Call:
 
-`/social-feed/1234
+`/social-feed/1234`
 
 ### Success Response:
 
@@ -95,7 +93,7 @@ Returns json data of a single posts. Post id used has been retreived from Show S
 ```javascript
 {
   "id": 1234,
-  "social-network": "twitter",
+  "social_network": "twitter",
   "hashtag": "collaboration",
   "image": "http://www.example.com/dubai.jpg",
   "text" : "Lorem ipsum",
@@ -105,7 +103,7 @@ Returns json data of a single posts. Post id used has been retreived from Show S
 
 ## Social Feed Item Entity
 **id** `integer` Our internal identification number.  
-**social-network** `string` Social network where the item originates from. Possible values are `twitter` and `instagram`.  
+**social_network** `string` Social network where the item originates from. Possible values are `twitter` and `instagram`.  
 **hashtag** `string` Secondary hashtag assigned to the post.  
 **image** `string` URL of the image assigned to the item. Empty string if no image is available.  
 **text** `string` Text assigned to the item. Empty string if no text is available.  
