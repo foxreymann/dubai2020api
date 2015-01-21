@@ -24,12 +24,15 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 `hashtag=[string]` defaults to empty string  
 - filter items by secondary hashtag (\#mobility, \#sustainability etc.)  
 
-`return_posts_after_post_id=[integer|null]` defaults to `null`
-- Id of last post already received from the API by the web app. Next post after that one should be returned as first post.
+`return_posts_after_post_id=[integer|null]` defaults to `null`  
+- Id of last post already received from the API by the web app. Next post after that one should be returned as first post.  
 - If `null` then newest post available should be returned as first post.
 
-`items_to_return=[integer]` defaults to `20`
+`items_to_return=[integer]` defaults to `20`  
 - Number of items to be returned.
+
+`lang=[en|ar]` defaults to `en`  
+- Language of posts
 
 ### Sample Call:
 
@@ -107,5 +110,3 @@ Returns json data of a single posts. Post id used has been retreived from Show S
 **image** `string` URL of the image assigned to the item. Empty string if no image is available.  
 **text** `string` Text assigned to the item. Empty string if no text is available.  
 **epoch** `integer` [Unix time](http://en.wikipedia.org/wiki/Unix_time) of when the item was posted.
-
-
