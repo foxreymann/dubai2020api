@@ -34,16 +34,20 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 `lang=[en|ar]` defaults to `en`  
 - Language of posts
 
+`callback=[string]` defaults to `callback`  
+- JSONP callback function name  
+- values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
+
 ### Sample Call:
 
-`/social-feed?hashtag=opportunity&last_item_id=1234&items_to_return=80&lang=ar`
+`/social-feed?hashtag=opportunity&last_item_id=1234&items_to_return=80&lang=ar&callback=angular.callbacks._0`
 
 ### Success Response:
 
 **Code:** 200  
 **Content:**  
 ```javascript
-{
+callback({
   "items": [
     {
       "id": 1234,
@@ -62,7 +66,7 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
       "epoch": "1421586218"
     }
   ]
-}
+})
 ```
 
 ## Show Social Feed Item
@@ -82,23 +86,31 @@ Returns json data of a single posts. Post id used has been retreived from Show S
 
 `id=[integer]`
 
+### Query String Params
+
+**Optional:**
+
+`callback=[string]` defaults to `callback`  
+- JSONP callback function name  
+- values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
+
 ### Sample Call:
 
-`/social-feed/1234`
+`/social-feed/1234?callback=angular.callbacks._1`
 
 ### Success Response:
 
 **Code:** 200  
 **Content:**  
 ```javascript
-{
+callback({
   "id": 1234,
   "social_network": "twitter",
   "hashtag": "collaboration",
   "image": "http://www.example.com/dubai.jpg",
   "text" : "Lorem ipsum",
   "epoch": "1421586217"
-}
+})
 ```
 
 ## Social Feed Item Entity
