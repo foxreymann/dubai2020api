@@ -1,3 +1,5 @@
 to run:
-  $ npm i
-  $ nodemon index.js
+```bash
+$ npm i
+$ nodemon index.js
+```
