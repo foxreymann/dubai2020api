@@ -2,32 +2,18 @@ var express = require('express');
 var app = express();
 
 var socialFeed = {
-  "items": [
-    {
-      "id": 1233,
-      "social_network": "twitter",
-      "hashtag": "collaboration",
-      "image": "",
-      "text" : "Lorem ipsum dolor dolor dolor",
-      "epoch": "1421586217"
-    },
-    {
-      "id": 1234,
-      "social_network": "instagram",
-      "hashtag": "diversity",
-      "image": "http://photos-h.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10903539_766280623463767_591925845_n.jpg",
-      "text" : "Lorem ipsum",
-      "epoch": "1421586217"
-    },
-    {
-      "id": 1235,
-      "social_network": "instagram",
-      "hashtag": "culture",
-      "image": "http://photos-d.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10914250_444222172391539_115478886_n.jpg",
-      "text" : "",
-      "epoch": "1421586218"
-    }
-  ]
+  "items": []
+}
+
+for(var i=0; i < 100; i++) {
+  var item = {};
+  item.id = i;
+  item.social_network = "twitter";
+  item.hashtag = "diversity";
+  item.image = "http://photos-d.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10914250_444222172391539_115478886_n.jpg";
+  item.text = "post with id " + i;
+  item.epoch = "1421586217";
+  socialFeed.items.push(item);
 }
 
 app.get('/social-feed', function(req, res){
