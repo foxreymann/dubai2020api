@@ -28,8 +28,8 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 - Id of first post on the requested feed  
 - If `null` then newest post available should be returned as first post.
 
-`proceding_items_to_return=[integer]` defaults to `0`  
-- Number of items proceding first post to be returned.
+`proceeding_items_to_return=[integer]` defaults to `0`  
+- Number of items proceeding first post to be returned.
 
 `preceding_items_to_return=[integer]` defaults to `0`  
 - Number of items preceding first post to be returned.
@@ -43,7 +43,7 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 
 ### Sample Call:
 
-`/social-feed?hashtag=opportunity&first_item_id=1234&proceding_items_to_return=80&preceding_items_to_return=80&lang=ar&callback=angular.callbacks._0`
+`/social-feed?hashtag=opportunity&first_item_id=1234&proceeding_items_to_return=80&preceding_items_to_return=80&lang=ar&callback=angular.callbacks._0`
 
 ### Success Response:
 
