@@ -24,12 +24,15 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 `hashtag=[string]` defaults to empty string  
 - filter items by secondary hashtag (\#mobility, \#sustainability etc.)  
 
-`return_posts_after_post_id=[integer|null]` defaults to `null`  
-- Id of last post already received from the API by the web app. Next post after that one should be returned as first post.  
+`first_item_id=[integer|null]` defaults to `null`  
+- Id of first post on the requested feed  
 - If `null` then newest post available should be returned as first post.
 
-`items_to_return=[integer]` defaults to `20`  
-- Number of items to be returned.
+`proceding_items_to_return=[integer]` defaults to `0`  
+- Number of items proceding first post to be returned.
+
+`preceding_items_to_return=[integer]` defaults to `0`  
+- Number of items preceding first post to be returned.
 
 `lang=[en|ar]` defaults to `en`  
 - Language of posts
@@ -40,7 +43,7 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 
 ### Sample Call:
 
-`/social-feed?hashtag=opportunity&last_item_id=1234&items_to_return=80&lang=ar&callback=angular.callbacks._0`
+`/social-feed?hashtag=opportunity&first_item_id=1234&proceding_items_to_return=80&preceding_items_to_return=80&lang=ar&callback=angular.callbacks._0`
 
 ### Success Response:
 
@@ -66,50 +69,6 @@ callback({
       "epoch": "1421586218"
     }
   ]
-})
-```
-
-## Show Social Feed Item
-Returns json data of a single posts. Post id used has been retreived from Show Social Feed API call.
-
-### URL
-
-/social-feed/:id
-
-### Method:
-
-`GET`
-
-### URL Params
-
-**Required:**
-
-`id=[integer]`
-
-### Query String Params
-
-**Optional:**
-
-`callback=[string]` defaults to `callback`  
-- JSONP callback function name  
-- values used by frontend app are like `angular.callbacks._0`, `angular.callbacks._1` ...  
-
-### Sample Call:
-
-`/social-feed/1234?callback=angular.callbacks._1`
-
-### Success Response:
-
-**Code:** 200  
-**Content:**  
-```javascript
-callback({
-  "id": 1234,
-  "social_network": "twitter",
-  "hashtag": "collaboration",
-  "image": "http://www.example.com/dubai.jpg",
-  "text" : "Lorem ipsum",
-  "epoch": "1421586217"
 })
 ```
 
