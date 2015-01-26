@@ -3,7 +3,7 @@ var app = express();
 
 var items = [];
 
-for(var i=0; i < 100; i++) {
+for(var i=0; i < 10; i++) {
   var item = {};
   item.id = i;
   item.social_network = "twitter";
