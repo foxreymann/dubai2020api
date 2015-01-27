@@ -15,10 +15,10 @@ for(var i=0; i < 10; i++) {
 }
 
 app.get('/social-feed', function(req, res){
-  var items_to_return = parseInt(req.param('items_to_return', 20));
-  var return_posts_after_post_id = parseInt(req.param('return_posts_after_post_id', -1));
+  var first_item_id = parseInt(req.param('first_item_id', 0));
+  var proceeding_items_to_return = parseInt(req.param('proceeding_items_to_return', 0));
   var response = {};
-  response.items = items.slice(return_posts_after_post_id + 1, return_posts_after_post_id + 1 +items_to_return);
+  response.items = items.slice(first_item_id, first_item_id + proceeding_items_to_return + 1);
   res.jsonp(response);
 });
 
