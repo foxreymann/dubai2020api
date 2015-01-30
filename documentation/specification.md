@@ -51,6 +51,7 @@ Returns json feed with posts from Twitter and Instagram hashtagged with \#DubaiE
 **Content:**  
 ```javascript
 callback({
+  "number_of_items": 9191,
   "items": [
     {
       "id": 1234,
